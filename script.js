@@ -70,3 +70,35 @@ function openModal(imageSrc) {
 function closeModal() {
     document.getElementById("imageModal").style.display = "none";
 }
+// IMAGE MODAL SYSTEM
+const modal = document.getElementById("imageModal");
+const modalImg = document.getElementById("modalImage");
+const closeBtn = document.querySelector(".close-btn");
+
+// ALL PROJECT CARDS
+document.querySelectorAll(".project-card").forEach(card => {
+
+    card.addEventListener("click", () => {
+
+        const imageSrc = card.getAttribute("data-image");
+
+        // Ignore cards without image
+        if (!imageSrc) return;
+
+        modal.style.display = "flex";
+        modalImg.src = imageSrc;
+    });
+
+});
+
+// CLOSE MODAL
+closeBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+});
+
+// CLOSE WHEN CLICK OUTSIDE IMAGE
+modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+        modal.style.display = "none";
+    }
+});
