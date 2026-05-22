@@ -10,9 +10,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+<!-- IMAGE MODAL -->
+<div id="imageModal" class="modal">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImage">
+</div>
 </head>
 <body>
-
     <div class="loader"><span>LOADING SYSTEM...</span></div>
     <div class="vignette"></div>
     <canvas id="bg"></canvas>
@@ -94,21 +98,58 @@
             <h2 class="section-title">Technical Projects</h2>
             <div class="project-grid">
                 <!-- Replace 'project1.jpg' with your actual images -->
-                <div class="project-card" data-aos="flip-up">
+                <div class="project-card" data-aos="flip-up" onclick="openModal('project2.jpg')">
                     <img src="project1.jpg" alt="CAD Design">
-                    <div class="project-overlay">
-                        <h3>AutoCAD 3D Modeling</h3>
-                        <p>Mechanical Parts Design</p>
+			<div class="project-overlay">
+                        <h3>AutoCAD 2D Drafting</h3>
+                        <p>Surgical Instruments 2D Drafting</p>
                     </div>
                 </div>
-                <div class="project-card" data-aos="flip-up" data-aos-delay="200">
-                    <img src="project2.jpg" alt="Graphics Design">
+ 			<div class="project-card" data-aos="flip-up" data-aos-delay="200" onclick="openModal('project2.jpg')">
+                    <img src="project2.jpg" alt="CAD Design">
+			<div class="project-overlay">
+                        <h3>AutoCAD 3D Modeling</h3>
+                        <p>Surgical Instruments 3D Designing</p>
+                    </div>
+                </div>
+
+		<div class="project-card" data-aos="flip-up" data-aos-delay="200" onclick="openModal('project2.jpg')">
+                    <img src="project3.jpg" alt="CAD Design">
+                    <div class="project-overlay">
+                        <h3>AutoCAD 3D Modeling</h3>
+                        <p>Surgical Instruments 3D Designing</p>
+                    </div>
+                </div>
+               <div class="project-card" data-aos="flip-up" data-aos-delay="200" onclick="openModal('project2.jpg')">
+                    <img src="project4.jpg" alt="AI Designing">
+			 <div class="project-overlay">
+                        <h3>AI Powered Designing</h3>
+                        <p>Flyer's and Borcher's</p>
+                    </div>
+                </div>
+		<div class="project-card" data-aos="flip-up" data-aos-delay="200" onclick="openModal('project2.jpg')">
+                <img src="project5.jpg" alt="Graphics Designing">
                     <div class="project-overlay">
                         <h3>Branding & Graphics</h3>
                         <p>Logo & Layout Design</p>
                     </div>
                 </div>
-            </div>
+<!-- PDF PREVIEW CARD -->
+<div class="project-card pdf-card" data-aos="flip-up" data-aos-delay="200">
+
+    <!-- COVER PAGE ONLY -->
+    <img src="catalog-cover.jpg" alt="Catalogue Preview" class="pdf-preview">
+
+    <div class="project-overlay">
+        <h3>Catalogue Designing</h3>
+        <p>Click Below to Open PDF</p>
+
+        <a href="project6.pdf" target="_blank" class="pdf-btn">
+            Open Catalogue
+        </a>
+    </div>
+</div>
+
         </section>
 
         <!-- EDUCATION & DIPLOMAS -->
