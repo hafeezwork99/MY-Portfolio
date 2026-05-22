@@ -61,3 +61,12 @@ window.addEventListener('resize', () => {
 });
 
 animate();
+// IMAGE MODAL FUNCTIONS
+function openModal(imageSrc) {
+    document.getElementById("imageModal").style.display = "flex";
+    document.getElementById("modalImage").src = imageSrc;
+}
+
+function closeModal() {
+    document.getElementById("imageModal").style.display = "none";
+}
